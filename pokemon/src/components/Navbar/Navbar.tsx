@@ -15,11 +15,14 @@ const Navbar = () => {
           <span className={styles.logo}>Pokemon</span>
         </Link>
         <button
-          data-collapse-toggle="navbar-default"
           type="button"
           className={styles.button}
           aria-controls="navbar-default"
           aria-expanded="false"
+          onClick={() => {
+            const menu = document.getElementById("navbar-default");
+            if (menu) menu.classList.toggle("hidden");
+          }}
         >
           <span className="sr-only">Open main menu</span>
           <svg
@@ -30,9 +33,9 @@ const Navbar = () => {
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
-              fill-rule="evenodd"
+              fillRule="evenodd"
               d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-              clip-rule="evenodd"
+              clipRule="evenodd"
             ></path>
           </svg>
         </button>
@@ -44,12 +47,20 @@ const Navbar = () => {
               </a>
             </li>
             <li>
-              <a href="#" className={styles.link}>
+              <a
+                href="https://www.linkedin.com/in/ikechukwu-anyanwu-42040a242/"
+                className={styles.link}
+                target="_blank"
+              >
                 About
               </a>
             </li>
             <li>
-              <a href="http://justiniyke.vercel.app" className={styles.link}>
+              <a
+                href="http://justiniyke.vercel.app"
+                className={styles.link}
+                target="_blank"
+              >
                 Contact
               </a>
             </li>
